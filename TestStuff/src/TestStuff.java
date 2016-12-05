@@ -1,5 +1,17 @@
 
 public class TestStuff {
+	
+	private int propA = 1;
+	private int propB = 2;
+	
+	public int getProps() {
+		return this.propA + this.propB;
+	}
+	
+	TestStuff() {
+		propA = 1;
+		propB = 2;
+	}
 
 	/**
 	 * Voodoo comparison of more than two values for equality.
@@ -16,6 +28,11 @@ public class TestStuff {
 		} else {
 			System.out.println("nope");
 		}
+		TestStuff foo = new TestStuff();
+		System.out.println(foo.propA);
+		
+		TestStuff bar = TestStuff();
+		bar.getProps();
 		/*
 		Legacy:
 			for (int i = 0; i < 10; i++) {
@@ -40,6 +57,10 @@ public class TestStuff {
 			);
 		*/
 		
+	}
+
+	private static TestStuff TestStuff() {
+		return null;
 	}
 
 }
